@@ -12,3 +12,6 @@ Write a function that, given a sequence, returns its equilibrium indices (if any
 ```
 phpunit EquilibriumIndexTest.php
 ```
+
+## My comments
+Running the test results in 1/1 (100%). Thanks for the opportunity to complete the code test, I hope that you find the solution and comments to be adequate.

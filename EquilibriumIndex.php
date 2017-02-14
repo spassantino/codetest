@@ -5,24 +5,25 @@
 function getEquilibriums($arr) {
 	/* store count of elements in the given array */
 	$numElements = count($arr);
-	/* start at zero sum for lower portion of the given array */
+	/* declare variable to start at zero sum for lower portion of the given array */
 	$left = 0;
-	/* store total sum of array values to upper portion of the given array */
+	/* declare variable to store total sum of array values to upper portion of the given array */
 	$right = array_sum($arr);
-	/* declare variable to store equilibrium indices */
+	/* declare variable to store equilibrium indices which will eventually be returned */
 	$output = array();
 	 /**
-	 * for loop iterates over variable numElements to check if
-	 * sum of lower part equal to sum of upper portion.
+	 * for loop iterates over number of elements in array to checking
+	 * if sum of lower part of $arr[i] equals to sum of upper portion.
 	 */
 	for ($i = 0; $i < $numElements; $i++) {
 		/* subtract value of current index in array from right sum */
 		$right -= $arr[$i];
 		/* if left==right store the index in to output[] */
 		if ($left == $right) $output[] = $i;
+		/* add value of current index in array to left sum */
 		$left += $arr[$i];
 	}
-/* return array of equilibrium indices */
+/* once for loop has iterated over each element, return array of equilibrium indices */
 	return $output;
 }
 /**
